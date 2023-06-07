@@ -29,7 +29,7 @@ if [[ "${arch}" -ne 32 && "${arch}" -ne 64 ]]; then
 fi
 
 syscall_tbl="$linux_src/arch/x86/entry/syscalls/syscall_${arch}.tbl"
-all_defs="syscall_defs"
+all_defs="/tmp/syscall_defs"
 
 find_all_defs() {
     grep -Poz "(?s)\bSYSCALL_DEFINE[0-6]\(.*?\)" \
